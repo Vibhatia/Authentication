@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 15px; */
+}
+
+.flex-container {
+    display: flex;
+    
+  }
+  
+  .flex-container > div {
+    background-color:white;
+    margin: 10px 0px 10px 60px;
+    padding: 20px;
+    font-size: 30px;
+    
+  }
+  .main{
+    background-color:white;
+    width:57vw;
+    height: 85vh;
+    margin-left: 7vw;
+    margin-top: 15vh;
+    padding-top: 60px;
+  }
+  .radio{
+      font-size: 15px;
+      font-weight: 500;
+  }
+  #male{
+      margin-left: 20px;;
+  }
+  .year{
+      margin-bottom: 10px;
+  }
+  .checkbox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top: 8vh;
+     font-size: 15px;
+   
+   }
+   .checkbox1 input{
+    margin-right: 0.5rem;
+  }
+  .button1{
+    margin-top: 5%;
+    margin-left: 24%;
+  }
+  .button1 button{
+    
+    width:225px;
+    height:35px;
+    border-radius: 20px;
+    background: linear-gradient(to right,#52D1F9, #E563F8);
+    color: white;
+  } 
+  .grey{
+      background-color:#d1d1d1;
+      height:35px;
+      width:280px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      margin-bottom: 4px;
+  }
+  input::placeholder{
+        font-weight: 600;
+        color: black;
+        padding-left: 8px;
+
+  }

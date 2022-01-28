@@ -1,0 +1,32 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.otp{
+    width:30vw;
+  height:72vh;
+  margin-top: 100px;
+  
+ 
+  margin-left: 19vw;
+  background-color: white;
+}
+#for{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+.content{
+    font-size: 24px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 500;
+    margin-bottom: 15%;
+}
+#mail{
+    margin-top: 15px;
+}
+

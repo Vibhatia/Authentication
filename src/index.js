@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Home from './Home';
+import Signup from './Signup';
+import Otp from './Otp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <Home/> */}
+    {/* <Signup/> */}
+    {/* <Otp/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
