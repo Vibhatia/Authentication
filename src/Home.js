@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 // import logo from "./CSILOGO.png";
 import logo from "./CSILOGO.png"
+import {Link} from "react-router-dom";
 
 const Home = () => {
     return <div className="curve">
@@ -12,7 +13,7 @@ const Home = () => {
                     <li><a href="index.html" target="_blank" ><img src={logo} alt="bjjb" style={{width:"45px",height:"50px"}}/></a></li>
                     <li><a href="ABOUT.html" target="_blank" >Home</a></li>
                     <li><a href="" >Dashboard</a></li>
-                    <li><a href="" >Logout</a></li>
+                    <li><Link to={'/'}>Logout</Link></li>
 
                 </ul>
             </nav>

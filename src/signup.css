@@ -57,6 +57,9 @@
     border-radius: 20px;
     background: linear-gradient(to right,#52D1F9, #E563F8);
     color: white;
+  }
+  button:hover{
+    cursor:pointer;
   } 
   .grey{
       background-color:#d1d1d1;
@@ -67,9 +70,9 @@
       border: none;
       margin-bottom: 4px;
   }
-  input::placeholder{
-        font-weight: 600;
+  /* .email1 input::placeholder{ */
+        /* font-weight: 600;
         color: black;
         padding-left: 8px;
 
-  }
+  } */
