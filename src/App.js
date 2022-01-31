@@ -29,10 +29,11 @@ function App() {
     console.log(res.data)
     navigate("/home");
   })
-  .catch(err)(
+  .catch((error) =>{
+
       alert("Invalid Credentials!!")
-  )
- 
+  }
+ )
 }
 
   return (

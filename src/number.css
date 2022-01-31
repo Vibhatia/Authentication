@@ -7,7 +7,7 @@
 .cover{
     background-color: #fff;
      /* border: 5px solid red; */
-     margin-left: 12%;
+     margin-left: 14%;
       min-width: 350px;
       max-width: 350px;
       min-height: 450px;
@@ -16,7 +16,7 @@
       padding: 30px;
       box-sizing: border-box;
       border-radius: 10px;
-      margin-top: 40px;
+      margin-top: 140px;
       margin-bottom: 30px;
       box-shadow: 4px 2px 6px 4px rgba(0, 0, 0, 0.4);
      }
@@ -41,23 +41,32 @@
       background: rgba(100, 99, 99, 0.207);
       margin-top: 30px;
       margin-left: 15px;
+      
      
     }
      .rid {
          display: flex;
          flex-direction: row;
+         align-items: center;
+         justify-content: center;
          
      }
      .rid input{
          padding: 0rem;
+         height:40px;
+         width:40px;
+         text-align: center;
+         outline: none;
+         border:none
          
      }
      .submiit input{
-        padding: 0.7rem 0.4rem;
+        padding: 0.5rem 0.8rem;
         color: #fff;
         background: linear-gradient(to right,#52D1F9 ,#DC38F4 );
         border-radius: 1rem;
         font-size: 22px;
         border: none;
-        margin-top: 6rem;
+        margin-top: 4rem;
+        margin-left: 6rem;
     }

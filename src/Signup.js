@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 const Signup = () => {
   const navigate = useNavigate();
-
+  const gen=["Male","Female"];
  const url="https://registrationloginapi.herokuapp.com/api/users/register";
   const [data,setdata]=useState({
     name:"",
@@ -14,6 +14,9 @@ const Signup = () => {
     password:"",
     address:"",
     phone:"",
+    gen:"",
+    branch:"",
+    year:""
   })
   function handle(e){
     const newdata={...data};
@@ -24,8 +27,8 @@ const Signup = () => {
 
   function submit(e){
     e.preventDefault();
-    const{name,rollno,email,password,address,phone}=data
-    if(name && rollno && email && password && address && phone){
+    const{name,rollno,email,password,address,phone,gen}=data
+    if(name && rollno && email && password && address && phone && gen){
     Axios.post(url,{
       name:data.name,
       rollno:data.rollno,
@@ -33,13 +36,22 @@ const Signup = () => {
       password:data.password,
       address:data.address,
       phone:data.phone,
+      gen:data.gen,
+      branch:data.branch,
+      year:data.year
 
     })
     .then(res => {
       console.log(res.data)
     })
     alert("You are successfully registered!!")
-    navigate("/");
+
+
+    Axios.get("http://registrationloginapi.herokuapp.com/api/users/signup?phonenumber=917668043605&channel=sms")
+    .then((response)=>{
+     console.log(response.data);
+    })
+    navigate("/number");
   }
   else{
     alert("Invalid Inputs!!");
@@ -64,7 +76,7 @@ const Signup = () => {
             <input onChange={(e)=>handle(e)} id="rollno" value={data.rollno} type="tel" placeholder="Roll no."class="grey"/>
           </div>
           <div className="branch">
-            <select name="branch" id="branch"class="grey">
+            <select name="branch"  value={data.branch} onChange={(e)=>handle(e)} id="branch" class="grey">
               <option value="..">Branch</option>
               <option value="CS">CS</option>
               <option value="CSE">CSE</option>
@@ -93,7 +105,7 @@ const Signup = () => {
             <input type="number" />
           </div> */}
           <div className="year">
-            <select name="year" id="branch"class="grey">
+            <select name="year" id="year" value={data.year} onChange={(e)=>handle(e)}  class="grey">
               <option value="..">Year</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -102,11 +114,20 @@ const Signup = () => {
             </select>
           </div>
           <div className="radio">
-            Gender
-            <input type="radio" id="male" name="fav_language" value="HTML" />
+              {/* Gender */}
+            {/* <input type="radio" id="male" name="fav_language" value="HTML"  />
             <label for="html">Male</label>
             <input type="radio" id="female" name="fav_language" value="CSS" />
-            <label for="css">Female</label>
+            <label for="css">Female</label> */}
+            {
+              gen.map(result=>(
+                <>
+                <input type="radio" value={result} id="gen" onChange={(e)=>handle(e)} name="gen" />
+                <b>{result}</b>
+                </>
+              ))
+              }
+
           </div>
           <div className="tel">
             <input onChange={(e)=>handle(e)} id="phone" value={data.phone} type="tel" placeholder="Contact no."class="grey" />

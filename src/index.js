@@ -5,6 +5,7 @@ import App from './App';
 import Home from './Home';
 import Signup from './Signup';
 import Otp from './Otp';
+import Number from './Number';
 // import Number from './Number'
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/home" element={<Home/>}/>
       <Route path="/otp" element={<Otp/>}/>
+      <Route path="/number" element={<Number/>}/>
 
     </Routes>
     </Router>
